@@ -6,11 +6,11 @@ var num1 = 54;
 var num2 = 31;
 
 if (num1 > num2) {
-    document.write('num1 is larger');
-    // document.write('largest number is ' + num1);
+    console.log('num1 is larger');
+    // console.log('largest number is ' + num1);
 } else {
-    document.write('num2 is larger');
-    // document.write('largest number is ' + num2);
+    console.log('num2 is larger');
+    // console.log('largest number is ' + num2);
 }
 
 // 2. Write a JavaScript conditional statement to find the sign of product of three numbers.
@@ -18,14 +18,14 @@ if (num1 > num2) {
 //    Sample numbers : 3, -7, 2
 //    Output : The sign is -
 
-var sum = (-4 + 6 - 5);
+var sum = (-4 + 6 - -5);
 
 if (sum > 0) {
-    document.write('the number is (-)');
+    console.log('the number is (-)');
 } else if (sum < 0) {
-    document.write('the number is (+)');
+    console.log('the number is (+)');
 } else {
-    document.write('the number is (0)');
+    console.log('the number is (0)');
 }
 
 
@@ -33,6 +33,14 @@ if (sum > 0) {
 //    Display an alert box to show the result. Go to the editor
 //    Sample numbers : 0, -1, 4
 //    Output : 4, 0, -1
+
+var sum2 = (-4 + 6 + 5);
+
+if (sum2 > 0) {
+    console.log('the number is +' + sum2);
+}  else {
+    console.log('the number is ' + sum2);
+}
 
 
 // 4. Write a JavaScript conditional statement to find the largest of five numbers.
@@ -47,5 +55,30 @@ if (sum > 0) {
 //    Bonus: Make it handle a few collective nouns like "sheep" and "geese".
 //    HINT: it's an if-else-if
 
+var collectives = ['sheep', 'fish', 'goose'];
 var animal = 'cat';
 var numberOfAnimals = 3;
+
+if (numberOfAnimals > 1 && collectives.includes(animal)) {
+
+    if (animal === 'goose') {
+        console.log(numberOfAnimals + ' geese');
+    } else {
+        console.log(numberOfAnimals + ' ' + animal);
+    }
+
+} else if (numberOfAnimals > 1) {
+
+    console.log(numberOfAnimals + ' ' + animal + 's');
+
+} else if (numberOfAnimals === 1) {
+
+    console.log('lonely ' + animal);
+
+} else {
+
+    console.log('no ' + animal + ' :(');
+
+}
+
+
